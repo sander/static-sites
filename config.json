@@ -1,0 +1,14 @@
+{
+  "server": {
+    "protocol": "http",
+    "name": "srv",
+    "port": 8000
+  },
+  "couchdb": {
+    "protocol": "http",
+    "name": "localhost",
+    "port": 5984,
+    "db": "static-sites"
+  },
+  "secret": "D:kX:l0bqv0LU;;#uwQNS*[gA8?l;Yc"
+}

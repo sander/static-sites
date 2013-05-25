@@ -1,0 +1,23 @@
+<!doctype html>
+
+<meta charset=utf-8>
+<link rel=stylesheet href=client.css>
+<script src=https://login.persona.org/include.js></script>
+<script src=client.js></script>
+
+<div class=anonymous>
+  <p>
+    want to upload your web app?
+    <a href=javascript: id=login><img src=signin.png alt='Sign in'></a>
+</div>
+
+<div class=authenticated>
+  <p><output name="email"></output> <a href=javascript: id=logout>sign out</a>
+  <div id=folder></div>
+</div>
+
+<div class='undecided'>
+  <p>loading…
+</div>
+
+<script>app.init()</script>
