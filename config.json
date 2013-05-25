@@ -6,8 +6,8 @@
   },
   "couchdb": {
     "protocol": "http",
-    "name": "localhost",
-    "port": 5984,
+    "name": "forfastlearners.com",
+    "port": 5986,
     "db": "static-sites"
   },
   "secret": "D:kX:l0bqv0LU;;#uwQNS*[gA8?l;Yc"

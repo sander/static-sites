@@ -59,12 +59,15 @@ app.get '/folder', (req, res) ->
 
 app.put '/folder/*', (req, res) ->
   email = req.session.email
-  if not email? then return res.end 'not signed in'
 
-  folder_for email, (doc) ->
-    req.url = req.url.replace 'folder', "#{config.couchdb.db}/#{doc._id}"
-    req.url += "?rev=#{doc._rev}"
-    proxy_request req, res
+  if email?
+    folder_for email, (doc) ->
+      req.url = req.url.replace 'folder', "#{config.couchdb.db}/#{doc._id}"
+      req.url += "?rev=#{doc._rev}"
+      console.log req.url
+      proxy_request req, res
+  else
+    res.end 'not signed in'
 
 app.get '/*', (req, res) ->
   path = "#{__dirname}/static#{req.url}"
